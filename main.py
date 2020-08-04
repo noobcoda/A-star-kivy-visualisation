@@ -93,9 +93,9 @@ class GameScreen(Widget):
             draw(grid,self.rows)
 
             #making barriers
-            for i in barriers:
+            for counter, i in enumerate(barriers):
                 for j in i:
-                    barrier = Node(i,j,Window.width,self.rows)
+                    barrier = Node(counter,j,Window.width,self.rows)
                     barrier.make_obs()
 
 def draw(grid,rows):
