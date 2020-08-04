@@ -82,7 +82,7 @@ class GameScreen(Widget):
     def new_game(self,uLat,uLon,bLat,bLon):
         grid = make_grid(self.rows)
 
-        start = Node(uLat,uLon,Window.width,self.rows) #i square them just in case they have negative values
+        start = Node(uLat,uLon,Window.width,self.rows) 
         end = Node(bLat,bLon,Window.width,self.rows)
         start.make_start()
         end.make_end()
