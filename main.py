@@ -81,9 +81,11 @@ class GameScreen(Widget):
 
     def new_game(self,uLat,uLon,bLat,bLon):
         grid = make_grid(self.rows)
+        
+        nodeWidth = Window.width//self.rows
 
-        start = Node(uLat,uLon,Window.width,self.rows) 
-        end = Node(bLat,bLon,Window.width,self.rows)
+        start = Node(uLat,uLon,nodeWidth,self.rows) 
+        end = Node(bLat,bLon,nodeWidth,self.rows)
         start.make_start()
         end.make_end()
 
@@ -95,7 +97,7 @@ class GameScreen(Widget):
             #making barriers
             for counter, i in enumerate(barriers):
                 for j in i:
-                    barrier = Node(counter,j,Window.width,self.rows)
+                    barrier = Node(counter,j,nodeWidth,self.rows)
                     barrier.make_obs()
 
 def draw(grid,rows):
