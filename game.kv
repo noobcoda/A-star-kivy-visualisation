@@ -1,0 +1,16 @@
+#: import utils kivy.utils
+
+GameScreen:
+    id: game_screen
+    canvas.before:
+        Color:
+            rgb: utils.get_color_from_hex('#EBECED')
+        Rectangle:
+            size: self.size
+            pos: self.pos
+    FloatLayout:
+        RectWidget:
+            id: rect_widget
+    FloatLayout:
+        LineWidget:
+            id: line_widget
